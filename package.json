@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "author": "Charles Taylor <charlestaylor95@gmail.com>",
   "scripts": {
-    "test": "jest",
+    "test": "jest --watch",
     "dev": "nodemon",
     "format": "prettier -w ."
   },
