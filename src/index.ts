@@ -1,7 +1,7 @@
 import { hello } from "./hello";
-import readline from "node:readline";
+import readline from "node:readline/promises";
 
-function main() {
+async function main() {
   console.log(hello("world!"));
 
   const app = readline.createInterface({
@@ -9,10 +9,11 @@ function main() {
     output: process.stdout,
   });
 
-  app.question("What do you think of Node.js? ", (answer) => {
-    console.log(`Thank you for your valuable feedback: ${answer}`);
-    app.close();
-  });
+  const answer = await app.question("What do you think of Node.js? ");
+    
+  console.log(`Thank you for your valuable feedback: ${answer}`);
+    
+  app.close();
 }
 
 main();
