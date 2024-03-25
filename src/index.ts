@@ -11,9 +11,9 @@ async function main() {
   });
 
   const answer = await app.question("What do you think of Node.js? ");
-    
+
   console.log(`Thank you for your valuable feedback: ${answer}`);
-    
+
   app.close();
 }
 
