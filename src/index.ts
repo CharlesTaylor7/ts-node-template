@@ -7,6 +7,7 @@ async function main() {
   const app = readline.createInterface({
     input: process.stdin,
     output: process.stdout,
+    terminal: false,
   });
 
   const answer = await app.question("What do you think of Node.js? ");
